@@ -34,8 +34,8 @@ Example:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/hindi-sentiment-deberta.git
-cd hindi-sentiment-deberta
+git clone https://github.com/pk-03/DeBERTa-based-Hindi-sentiment-classification.git
+cd DeBERTa-based-Hindi-sentiment-classification
 ```
 
 ### 2. Install Dependencies
@@ -50,11 +50,12 @@ pip install transformers torch pandas scikit-learn indic-nlp-library
 ## 🏋️‍♀️ Training the Model
 
 ### 1. Load and preprocess your dataset
-Ensure your `DataFrame` has `Reviews` and `labels` columns.
+Ensure your `DataFrame` has `Reviews` and `labels` columns or you can access the datasets given in [Datasets](https://github.com/pk-03/Data-Augmentation-and-Datasets.git).
 
 ```python
 data = pd.read_csv("your_dataset.csv")  # or .tsv
 ```
+
 
 ### 2. Run the training script
 The script:
@@ -120,10 +121,10 @@ tokenizer = AutoTokenizer.from_pretrained("./deberta-hindi-sentiment")
 
 | Metric    | Value |
 |-----------|-------|
-| Accuracy  |  -    |
-| F1 Score  |  -    |
-| Precision |  -    |
-| Recall    |  -    |
+| Accuracy  |  84.54|
+| F1 Score  |  84.51|
+| Precision |  84.73|
+| Recall    |  84.54|
 
 > You can update this table after training.
 <!-- Test Results: {'eval_loss': 1.5190038681030273, 'eval_accuracy': 0.8454301075268817, 'eval_f1': 0.8451949511547825, 'eval_precision': 0.847356804309445, 'eval_recall': 0.8454301075268817, 'eval_runtime': 15.0775, 'eval_samples_per_second': 98.69, 'eval_steps_per_second': 12.336, 'epoch': 38.0} -->
@@ -154,4 +155,4 @@ This project is licensed under the MIT License. See `LICENSE` for more details.
 
 ## ✨ Contact
 
-For queries, reach out to [yourname@example.com] or create an issue.
+For queries, reach out to [pranitarora074@gmail.com] or create an issue.
